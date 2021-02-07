@@ -22,7 +22,7 @@ function broadcastWitnessAction(contractAction, contractPayload) {
   };
 
   // eslint-disable-next-line no-console
-  client.broadcast.json(transaction, privateSigningKey, (x, y) => console.log(x || y));
+  client.broadcast.json(transaction, privateSigningKey, (x, y) => console.log(x || y)).catch(e=> console.log(e));
 }
 
 program.version(packagejson.version);
